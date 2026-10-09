@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Sacramento&family=Quicksand:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-cotton-candy: #FFB6D5;
+  --color-baby-pink: #FFDDEE;
+  --color-strawberry: #FF75AA;
+  --color-rose: #F28CB5;
+  --color-lavender: #E8DFFF;
+  --color-cream: #FFF8F0;
+  --color-berry: #793D5C;
+}
+
+body {
+  font-family: 'Fredoka', 'Quicksand', sans-serif;
+  background-color: #FFF8F0;
+  color: #793D5C;
+  overflow-x: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Sacramento', cursive;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFDDEE;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF75AA;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F28CB5;
+}
+
+/* Glassmorphism & Soft Dreamy Shadows */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 182, 213, 0.4);
+  box-shadow: 0 10px 30px -5px rgba(242, 140, 181, 0.25);
+}
+
+.glass-panel-dark {
+  background: rgba(121, 61, 92, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 182, 213, 0.3);
+  box-shadow: 0 15px 35px rgba(121, 61, 92, 0.3);
+}
+
+.pink-shadow {
+  box-shadow: 0 12px 28px -6px rgba(255, 117, 170, 0.35);
+}
+
+.pink-shadow-lg {
+  box-shadow: 0 20px 40px -10px rgba(242, 140, 181, 0.45);
+}
+
+.cute-border {
+  border: 3px solid #FFB6D5;
+}
+
+/* Sparkle & Pulse animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 117, 170, 0.6)); }
+  50% { filter: drop-shadow(0 0 22px rgba(255, 117, 170, 0.9)); }
+}
+
+@keyframes rotateSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.animate-spin-slow {
+  animation: rotateSlow 15s linear infinite;
+}
+
+/* Paper / Scrapbook texture overlay */
+.paper-texture {
+  background-image: radial-gradient(#FF75AA 0.75px, transparent 0.75px), radial-gradient(#FF75AA 0.75px, #FFF8F0 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.15;
+}
+
+/* Custom Ribbon style */
+.ribbon-banner {
+  background: linear-gradient(135deg, #FF75AA, #F28CB5);
+  box-shadow: 0 4px 15px rgba(255, 117, 170, 0.4);
+}
